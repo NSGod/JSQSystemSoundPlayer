@@ -2,17 +2,11 @@
 
 ## Documentation
 
-[Docs](http://www.jessesquires.com/JSQSystemSoundPlayer/) generated with [CocoaDocs](http://cocoadocs.org/readme/). Hosted by [GitHub Pages](https://pages.github.com).
-
-## Prerequisites
-
-* [cocoadocs.org](http://cocoadocs.org/readme/)
-* [appledoc](https://github.com/tomaz/appledoc) ([v2.2 build 963](https://github.com/tomaz/appledoc/releases/tag/v2.2-963))
-* [bundler](http://bundler.io)
+[Docs](http://www.jessesquires.com/JSQSystemSoundPlayer/) generated with [jazzy](https://github.com/realm/jazzy). Hosted by [GitHub Pages](https://pages.github.com).
 
 ## Setup
 
-The `gh-pages` branch includes the `develop` branch as a [git submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules), as well as [cocoadocs.org](http://cocoadocs.org/readme/), in order to generate docs.
+The `gh-pages` branch includes the `develop` branch as a [git submodule](http://git-scm.com/book/en/v2/Git-Tools-Submodules), in order to generate docs.
 
 ````bash
 $ git clone https://github.com/jessesquires/JSQSystemSoundPlayer.git
@@ -32,4 +26,10 @@ $ ./build_docs.sh
 
 ````bash
 $ open index.html -a Safari
+````
+
+## Publish
+
+````bash
+$ ./publish_docs.sh
 ````
