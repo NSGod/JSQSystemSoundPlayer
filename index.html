@@ -81,7 +81,7 @@
 <p><em>A fancy Obj-C wrapper for Cocoa <a href="https://developer.apple.com/library/ios/documentation/AudioToolbox/Reference/SystemSoundServicesReference/Reference/reference.html">System Sound Services</a>, for iOS and OS X.</em></p>
 <a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
 
-<p>This library is a light-weight component to play sound effects in your app. 
+<p>This library is a light-weight component to play sound effects in your app.
 To determine your audio needs, see <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AudioVideo/Conceptual/MultimediaPG/UsingAudio/UsingAudio.html#//apple_ref/doc/uid/TP40009767-CH2-SW10">Best Practices for iOS Audio</a>.</p>
 
 <p><strong>tl;dr</strong></p>
@@ -98,7 +98,7 @@ To determine your audio needs, see <a href="https://developer.apple.com/library/
 </ul>
 </blockquote>
 
-<p>If this does not fit your needs, then this library is not for you! 
+<p>If this does not fit your needs, then this library is not for you!
 See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/Reference/AVAudioPlayerClassReference/Reference/Reference.html">AVAudioPlayer</a>, instead.</p>
 
 <p><img src="https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-ios.png" alt="screenshot ios"> &nbsp;&nbsp;&nbsp; <img src="https://raw.githubusercontent.com/jessesquires/JSQSystemSoundPlayer/develop/screenshot-osx.png" alt="screenshot osx"></p>
@@ -118,6 +118,7 @@ See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/
 <ul>
 <li>iOS 6.0+</li>
 <li>OS X 10.7+</li>
+<li>tvOS 9.0+</li>
 <li>ARC</li>
 </ul>
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
@@ -134,9 +135,7 @@ See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/
 <li>Add <code>AudioToolbox.framework</code></li>
 </ol>
 <a href='#getting_started' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='getting_started'>Getting Started</h2>
-<pre class="highlight plaintext"><code>#import &lt;JSQSystemSoundPlayer/JSQSystemSoundPlayer.h&gt;
-// or
-@import JSQSystemSoundPlayer;
+<pre class="highlight swift"><code><span class="kd">@import</span> <span class="kt">JSQSystemSoundPlayer</span><span class="p">;</span>
 </code></pre>
 <a href='#playing_sounds' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='playing_sounds'>Playing sounds</h4>
 <pre class="highlight plaintext"><code>[[JSQSystemSoundPlayer sharedPlayer] playSoundWithFilename:@"mySoundFile"
@@ -146,7 +145,7 @@ See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/
                                                 }];
 </code></pre>
 
-<p>String constants for file extensions provided for you: 
+<p>String constants for file extensions provided for you:
 * <code>kJSQSystemSoundTypeCAF</code>
 * <code>kJSQSystemSoundTypeAIF</code>
 * <code>kJSQSystemSoundTypeAIFF</code>
@@ -158,14 +157,14 @@ See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/
 </code></pre>
 <a href='#specifying_a_bundle' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='specifying_a_bundle'>Specifying a bundle</h4>
 
-<p>Need to load your audio resources from a specific bundle? <code>JSQSystemSoundPlayer</code> uses the main bundle by default, but you can specify another. </p>
+<p>Need to load your audio resources from a specific bundle? <code>JSQSystemSoundPlayer</code> uses the main bundle by default, but you can specify another.</p>
 
 <p><strong>NOTE:</strong> for each sound that is played <code>JSQSystemSoundPlayer</code> will <strong>always</strong> search the <strong>last specified bundle</strong>. If you are playing sound effects from multiple bundles, you will need to specify the bundle before playing each sound.</p>
 <pre class="highlight plaintext"><code>[JSQSystemSoundPlayer sharedPlayer].bundle = [NSBundle mainBundle];
 </code></pre>
 <a href='#demo_project' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='demo_project'>Demo project</h4>
 
-<p>The included example app, <code>Example.xcodeproj</code>, exercises all functionality of this framework. There are applications for iOS as well as OS X. </p>
+<p>The included example app, <code>Example.xcodeproj</code>, exercises all functionality of this framework. There are applications for iOS as well as OS X.</p>
 <a href='#for_a_good_time' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='for_a_good_time'>For a good time</h4>
 <pre class="highlight plaintext"><code>while (1) {
     [[JSQSystemSoundPlayer sharedPlayer] playVibrateSound];
@@ -173,7 +172,7 @@ See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/
 </code></pre>
 <a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
 
-<p>Read the fucking <a href="http://www.jessesquires.com/JSQSystemSoundPlayer">docs</a>. Generated with <a href="http://cocoadocs.org">cocoadocs</a>. Hosted by <a href="https://pages.github.com">GitHub Pages</a>.</p>
+<p>Read the fucking <a href="http://www.jessesquires.com/JSQSystemSoundPlayer">docs</a>. Generated with <a href="https://github.com/realm/jazzy">jazzy</a>. Hosted by <a href="https://pages.github.com">GitHub Pages</a>.</p>
 
 <p>More information on the <a href="https://github.com/jessesquires/JSQSystemSoundPlayer/tree/gh-pages"><code>gh-pages</code></a> branch.</p>
 <a href='#contribute' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contribute'>Contribute</h2>
@@ -195,8 +194,8 @@ See <a href="https://developer.apple.com/library/ios/DOCUMENTATION/AVFoundation/
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-11-15)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-11-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
