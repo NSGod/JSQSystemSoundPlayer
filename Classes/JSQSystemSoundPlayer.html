@@ -7,6 +7,7 @@
     <meta charset='utf-8'>
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
+    
   </head>
   <body>
     <a name="//apple_ref/objc/Class/JSQSystemSoundPlayer" class="dashAnchor"></a>
@@ -107,10 +108,10 @@ That is, whether the sound player is enabled or disabled.
 If disabled, it will not play sounds.</p>
 
 <div class="aside aside-see">
-          <p class="aside-title">See</p>
-          <code>toggleSoundPlayerOn:</code>
+    <p class="aside-title">See</p>
+    <code>toggleSoundPlayerOn:</code>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -286,10 +287,10 @@ This will enable or disable the playing of sounds via <code><a href="../Classes/
 This setting is persisted across application launches.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>Disabling the sound player (passing a value of <code>NO</code>) will invoke the <code>stopAllSounds</code> method.</p>
+    <p class="aside-title">Warning</p>
+    <p>Disabling the sound player (passing a value of <code>NO</code>) will invoke the <code>stopAllSounds</code> method.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -343,15 +344,17 @@ The system sound player will lazily initialize and load the file before playing 
 If this file has previously been played, it will be loaded from cache and played immediately.</p>
 
 <div class="aside aside-note">
-          <p class="aside-title">Note</p>
-          <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
+    <p class="aside-title">Note</p>
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
 <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
 
-        </div><div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>If the system sound object cannot be created, this method does nothing.</p>
+</div>
 
-        </div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the system sound object cannot be created, this method does nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -434,20 +437,24 @@ The system sound player will lazily initialize and load the file before playing 
 If this file has previously been played, it will be loaded from cache and played immediately.</p>
 
 <div class="aside aside-note">
-          <p class="aside-title">Note</p>
-          <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
+    <p class="aside-title">Note</p>
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
 <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
 
-        </div><div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>If the system sound object cannot be created, this method does nothing.</p>
+</div>
 
-        </div><div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>This method performs the same functions as <code>playSoundWithName: extension: completion:</code>,
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the system sound object cannot be created, this method does nothing.</p>
+
+</div>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This method performs the same functions as <code>playSoundWithName: extension: completion:</code>,
 with the excepion that, depending on the particular iOS device, this method may invoke vibration.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -528,11 +535,11 @@ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached,
                         <p>Stops playing all sounds immediately.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          Any completion blocks attached to any currently playing sound will <em>not</em> be executed.
+    <p class="aside-title">Warning</p>
+    Any completion blocks attached to any currently playing sound will <em>not</em> be executed.
 Calling this method will purge all <code>SystemSoundID</code> objects from cache, regardless of whether or not they were currently playing.
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -562,11 +569,11 @@ Calling this method will purge all <code>SystemSoundID</code> objects from cache
                         <p>Stops playing the sound with the given filename immediately.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>If a completion block is attached to the given sound, it will <em>not</em> be executed.
+    <p class="aside-title">Warning</p>
+    <p>If a completion block is attached to the given sound, it will <em>not</em> be executed.
 Calling this method will purge the <code>SystemSoundID</code> object for this file from cache, regardless of whether or not it was currently playing.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -617,11 +624,11 @@ Calling this method will purge the <code>SystemSoundID</code> object for this fi
 The system sound player will initialize, load, and cache the corresponding <code>SystemSoundID</code>.</p>
 
 <div class="aside aside-note">
-          <p class="aside-title">Note</p>
-          <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>, 
+    <p class="aside-title">Note</p>
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>, 
 <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -674,8 +681,8 @@ The system sound player will initialize, load, and cache the corresponding <code
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2015-11-29)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-01-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
