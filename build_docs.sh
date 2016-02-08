@@ -7,8 +7,8 @@
 git submodule update --remote
 
 jazzy --objc -o ./ \
-      --umbrella-header ./JSQSystemSoundPlayer/JSQSystemSoundPlayer/JSQSystemSoundPlayer/JSQSystemSoundPlayer.h \
-      --framework-root JSQSystemSoundPlayer/JSQSystemSoundPlayer/ \
+      --umbrella-header ./JSQSystemSoundPlayer/Source/JSQSystemSoundPlayer.h \
+      --framework-root JSQSystemSoundPlayer/ \
       --readme JSQSystemSoundPlayer/README.md \
       -a 'Jesse Squires' \
       -u 'https://twitter.com/jesse_squires' \
