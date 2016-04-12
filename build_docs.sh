@@ -6,7 +6,7 @@
 
 git submodule update --remote
 
-jazzy --objc -o ./ \
+jazzy --swift-version 2.2 --objc -o ./ \
       --umbrella-header ./JSQSystemSoundPlayer/Source/JSQSystemSoundPlayer.h \
       --framework-root JSQSystemSoundPlayer/ \
       --readme JSQSystemSoundPlayer/README.md \
