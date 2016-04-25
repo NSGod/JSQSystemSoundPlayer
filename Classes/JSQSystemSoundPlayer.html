@@ -200,6 +200,12 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div class="abstract">
                         <p>Returns a new <code><a href="../Classes/JSQSystemSoundPlayer.html">JSQSystemSoundPlayer</a></code> instance with the specified bundle.</p>
 
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Completion blocks are only called for sounds played with the shared player.</p>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -251,6 +257,12 @@ The default value is the main bundle. This value must not be <code>nil</code>.</
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a new <code><a href="../Classes/JSQSystemSoundPlayer.html">JSQSystemSoundPlayer</a></code> instance using the main bundle.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Completion blocks are only called for sounds played with the shared player.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -407,7 +419,7 @@ If this file has previously been played, it will be loaded from cache and played
                               <td>
                                 <div>
                                   <p>A block called after the sound has stopped playing.
-This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution. This value may be <code>nil</code>.</p>
+This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
 
                                 </div>
                               </td>
@@ -508,7 +520,84 @@ with the excepion that, depending on the particular iOS device, this method may 
                               <td>
                                 <div>
                                   <p>A block called after the sound has stopped playing.
-This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution. This value may be <code>nil</code>.</p>
+This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)JSQSystemSoundPlayer(im)playSoundWithSoundID:asAlert:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-playSoundWithSoundID:asAlert:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)JSQSystemSoundPlayer(im)playSoundWithSoundID:asAlert:completion:">-playSoundWithSoundID:asAlert:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Plays the sound that corresponds to the specified <code>SystemSoundID</code>, optionally as an alert.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playSoundWithSoundID</span><span class="p">:(</span><span class="n">SystemSoundID</span><span class="p">)</span><span class="nv">soundID</span>
+                     <span class="nf">asAlert</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">asAlert</span>
+                  <span class="nf">completion</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">JSQSystemSoundPlayerCompletionBlock</span><span class="p">)</span>
+                                 <span class="n">completionBlock</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>soundID</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The SystemSoundID to play.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>asAlert</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specifies whether or not the sound should be played as an alert.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block called after the sound has stopped playing.
+ This block is retained by <code>JSQSystemSoundPlayer</code>, temporarily cached, and released after its execution.</p>
 
                                 </div>
                               </td>
@@ -625,7 +714,7 @@ The system sound player will initialize, load, and cache the corresponding <code
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>, 
+    <p>The fileExtension parameter must be one of <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeCAF">kJSQSystemSoundTypeCAF</a></code>, <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIF">kJSQSystemSoundTypeAIF</a></code>,
 <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeAIFF">kJSQSystemSoundTypeAIFF</a></code>, or <code><a href="../Constants.html#/c:@kJSQSystemSoundTypeWAV">kJSQSystemSoundTypeWAV</a></code>.</p>
 
 </div>
@@ -681,7 +770,7 @@ The system sound player will initialize, load, and cache the corresponding <code
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-04-12)</p>
+          <p>&copy; 2016 <a class="link" href="https://twitter.com/jesse_squires" target="_blank" rel="external">Jesse Squires</a>. All rights reserved. (Last updated: 2016-04-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
